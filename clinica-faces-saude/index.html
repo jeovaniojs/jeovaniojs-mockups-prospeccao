@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Clínica Faces Saúde — Odontologia em Lajedo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f6f4; --surface:#ffffff; --tint:#e6efec;
+    --ink:#28312f; --muted:#728079; --line:#dbe6e2;
+    --accent:#1f6f5c; --accent-ink:#ffffff; --accent-soft:#dcece7;
+    --radius:16px; --shadow:0 18px 50px -24px rgba(20,70,60,.3);
+    --display:'Fraunces',Georgia,serif; --body:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.12;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+  .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+  .ic{width:22px;height:22px}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 24px;border-radius:999px;font-weight:600;font-size:.95rem;transition:transform .15s ease,box-shadow .15s ease,background .15s ease}
+  .btn svg{width:18px;height:18px}
+  .btn-primary{background:var(--accent);color:var(--accent-ink);box-shadow:0 10px 24px -10px var(--accent)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 30px -12px var(--accent)}
+  .btn-ghost{border:1.5px solid var(--line);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+  header.site{position:sticky;top:0;z-index:20;background:rgba(244,246,244,.85);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+  header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-size:1.28rem;font-weight:600}
+  .brand .mk{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--accent-soft);color:var(--accent)}
+  .brand .mk svg{width:19px;height:19px}
+  nav.links{display:flex;gap:30px;font-size:.92rem;font-weight:500;color:var(--muted)}
+  nav.links a:hover{color:var(--ink)}
+  header .btn{padding:10px 20px}
+  .navtoggle{display:none}
+
+  .hero{position:relative;overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding-top:84px;padding-bottom:96px}
+  .hero .blob{position:absolute;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle at 30% 30%,var(--accent-soft),transparent 70%);top:-160px;right:-160px;pointer-events:none}
+  .hero h1{font-size:clamp(2.4rem,5vw,3.6rem);margin:18px 0 20px}
+  .hero p.lead{font-size:1.1rem;color:var(--muted);max-width:34ch}
+  .hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:calc(var(--radius) + 4px);box-shadow:var(--shadow)}
+  .hero .card{padding:30px}
+  .hero .card .ct{font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+  .hero .card ul{list-style:none;display:flex;flex-direction:column;gap:16px}
+  .hero .card li{display:flex;gap:13px;align-items:flex-start}
+  .hero .card li .ib{flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:9px;background:var(--accent-soft);color:var(--accent)}
+  .hero .card li .ib svg{width:17px;height:17px}
+  .hero .card li b{display:block;font-weight:600;font-size:.96rem}
+  .hero .card li span{font-size:.86rem;color:var(--muted)}
+
+  section{padding:88px 0}
+  .sec-head{max-width:640px;margin-bottom:44px}
+  .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .sec-head h2{font-size:clamp(1.8rem,3.4vw,2.5rem);margin:14px 0 12px}
+  .sec-head p{color:var(--muted)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+  .tile{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
+  .tile:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--accent-soft)}
+  .tile .it{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--accent-soft);color:var(--accent);margin-bottom:16px}
+  .tile h3{font-size:1.16rem;margin-bottom:8px}
+  .tile p{font-size:.92rem;color:var(--muted)}
+
+  .why{background:var(--tint)}
+
+  .contact .box{max-width:560px;margin:0 auto;text-align:center;padding:44px 34px}
+  .contact .box .ct{font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+  .contact .phone{font-family:var(--display);font-size:clamp(1.9rem,4.4vw,2.7rem);font-weight:500}
+  .contact .sub{color:var(--muted);margin:8px 0 24px;font-size:.95rem}
+
+  .draftnote{background:var(--accent-soft);text-align:center;padding:18px 24px;font-size:.9rem;color:var(--accent-ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .draftnote b{color:var(--accent)}
+
+  footer.site{background:#1e2a27;color:#e6efec;padding:56px 0 40px;text-align:center}
+  footer.site .fname{font-family:var(--display);font-size:1.3rem;font-weight:600}
+  footer.site .fcity{margin-top:6px;font-size:.92rem;opacity:.8}
+  footer.site .fnote{margin-top:22px;font-size:.8rem;opacity:.6}
+
+  @media (max-width:860px){
+    nav.links,header .btn{display:none}
+    .hero .wrap{grid-template-columns:1fr;gap:36px;padding-top:56px;padding-bottom:64px}
+    .hero p.lead{max-width:none}
+    section{padding:60px 0}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <div class="brand"><span class="mk"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3c-2 0-3.5 1.6-3.5 4 0 2 .6 3 .9 5.2.3 2 .2 3.4.8 5.6.4 1.6.9 3.2 1.8 3.2 1.1 0 1.2-1.6 1.6-3.3.3-1.3.6-2.2 1.4-2.2s1.1.9 1.4 2.2c.4 1.7.5 3.3 1.6 3.3.9 0 1.4-1.6 1.8-3.2.6-2.2.5-3.6.8-5.6.3-2.2.9-3 .9-5.2 0-2.4-1.5-4-3.5-4-1.6 0-2.4.9-4 .9S8.6 3 7 3z"/></svg></span>Clínica Faces Saúde</div>
+    <nav class="links">
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn btn-primary" href="https://wa.me/5587999241445">Falar no WhatsApp</a>
+  </div>
+</header>
+
+<section class="hero">
+  <span class="blob"></span>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow"><span class="dot"></span>Odontologia · Lajedo · PE</span>
+      <h1>Um sorriso cuidado por uma equipe que te escuta</h1>
+      <p class="lead">Clínica de odontologia em Lajedo, com atendimento humanizado e abordagem multidisciplinar para cuidar da sua saúde bucal.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="https://wa.me/5587999241445">Agendar consulta <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="#servicos">Ver serviços</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ct">Como é o atendimento</div>
+      <ul>
+        <li><span class="ib"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9 6.8 19.1l1-5.8L3.5 9.2l5.9-.9L12 3z"/></svg></span><div><b>Começa pela avaliação</b><span>Uma conversa para entender seu caso e montar um plano de cuidado.</span></div></li>
+        <li><span class="ib"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12V7a2 2 0 1 1 4 0M10 11V5a2 2 0 1 1 4 0v6M14 11V7a2 2 0 1 1 4 0v6c0 4-3 7-7 7s-7-2-7-6l-1.5-2a1.7 1.7 0 0 1 2.6-2L6 12"/></svg></span><div><b>Abordagem multidisciplinar</b><span>Profissionais de áreas diferentes cuidando de você em conjunto.</span></div></li>
+        <li><span class="ib"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.5-9.3-8.5C1 9 3 5.5 6.5 5.5c2 0 3.3 1.2 4.2 2.4.9-1.2 2.2-2.4 4.2-2.4C18.6 5.5 21 9 19.3 12.5 17 16.5 12 21 12 21z"/></svg></span><div><b>Atendimento humanizado</b><span>Tempo para ouvir, explicar e deixar você à vontade.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="servicos">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow"><span class="dot"></span>O que oferecemos</span>
+      <h2>Como podemos ajudar</h2>
+      <p>Cada atendimento começa por entender a sua necessidade antes de propor qualquer tratamento.</p>
+    </div>
+    <div class="grid">
+      <div class="tile"><div class="it"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9 6.8 19.1l1-5.8L3.5 9.2l5.9-.9L12 3z"/></svg></div><h3>Consulta e avaliação</h3><p>Primeira conversa para entender sua saúde bucal e montar um plano individual.</p></div>
+      <div class="tile"><div class="it"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></div><h3>Odontologia preventiva</h3><p>Acompanhamento periódico para manter tudo em dia e evitar problemas maiores.</p></div>
+      <div class="tile"><div class="it"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3c-2 0-3.5 1.6-3.5 4 0 2 .6 3 .9 5.2.3 2 .2 3.4.8 5.6.4 1.6.9 3.2 1.8 3.2 1.1 0 1.2-1.6 1.6-3.3.3-1.3.6-2.2 1.4-2.2s1.1.9 1.4 2.2c.4 1.7.5 3.3 1.6 3.3.9 0 1.4-1.6 1.8-3.2.6-2.2.5-3.6.8-5.6.3-2.2.9-3 .9-5.2 0-2.4-1.5-4-3.5-4-1.6 0-2.4.9-4 .9S8.6 3 7 3z"/></svg></div><h3>Tratamentos odontológicos</h3><p>Procedimentos conduzidos com atenção ao conforto e explicação de cada etapa.</p></div>
+      <div class="tile"><div class="it"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12V7a2 2 0 1 1 4 0M10 11V5a2 2 0 1 1 4 0v6M14 11V7a2 2 0 1 1 4 0v6c0 4-3 7-7 7s-7-2-7-6l-1.5-2a1.7 1.7 0 0 1 2.6-2L6 12"/></svg></div><h3>Atendimento multidisciplinar</h3><p>Uma equipe de áreas diferentes cuidando do seu caso em conjunto.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre" class="why">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow"><span class="dot"></span>Sobre Clínica Faces Saúde</span>
+      <h2>Por que a Clínica Faces Saúde</h2>
+    </div>
+    <div class="grid">
+      <div class="tile"><div class="it"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><h3>Em Lajedo</h3><p>Atendimento próximo, pensado para quem é da cidade e da região.</p></div>
+      <div class="tile"><div class="it"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12V7a2 2 0 1 1 4 0M10 11V5a2 2 0 1 1 4 0v6M14 11V7a2 2 0 1 1 4 0v6c0 4-3 7-7 7s-7-2-7-6l-1.5-2a1.7 1.7 0 0 1 2.6-2L6 12"/></svg></div><h3>Equipe multidisciplinar</h3><p>Mais de um olhar sobre o seu caso, no mesmo lugar.</p></div>
+      <div class="tile"><div class="it"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.5-9.3-8.5C1 9 3 5.5 6.5 5.5c2 0 3.3 1.2 4.2 2.4.9-1.2 2.2-2.4 4.2-2.4C18.6 5.5 21 9 19.3 12.5 17 16.5 12 21 12 21z"/></svg></div><h3>Atendimento humanizado</h3><p>Cuidado e atenção como parte do tratamento.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="contact">
+  <div class="wrap">
+    <div class="card box">
+      <div class="ct">Agende sua avaliação</div>
+      <div class="phone">(87) 99924-1445</div>
+      <div class="sub">WhatsApp · Lajedo · PE</div>
+      <a class="btn btn-primary" href="https://wa.me/5587999241445">Falar no WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<div class="draftnote">Este é um <b>rascunho de demonstração</b>, não é o site oficial de Clínica Faces Saúde.</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fname">Clínica Faces Saúde</div>
+    <div class="fcity">Lajedo · PE</div>
+    <div class="fnote">Rascunho criado para fins de demonstração · Conteúdo genérico, sujeito a revisão</div>
+  </div>
+</footer>
+
+</body>
+</html>
