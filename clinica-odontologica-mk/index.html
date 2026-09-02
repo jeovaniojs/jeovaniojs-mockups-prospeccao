@@ -207,18 +207,37 @@ footer.ft .fnote{margin-top:24px;font-size:.79rem;opacity:.55}
 </section>
 
 <style>
-.ba-static{padding:5.5rem 0;background:var(--tint);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.ba-fig{margin:2.5rem auto 0;max-width:440px}
-.ba-fig img{width:100%;display:block;border-radius:calc(var(--r) + 8px);border:1px solid var(--line);box-shadow:var(--sh)}
-.ba-fig figcaption{margin-top:14px;text-align:center;font-size:.8rem;color:var(--mut);line-height:1.5}
+.mkba{--p:.5;position:relative;height:280vh;background:var(--tint);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.mkba-stage{position:sticky;top:0;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:64px 0}
+.mkba-stage>.wrap{width:100%}
+.mkba-grid{display:grid;grid-template-columns:1fr .92fr;gap:56px;align-items:center}
+.mkba-frame{position:relative;margin:0 auto;width:100%;max-width:400px;aspect-ratio:1/1;max-height:74vh;border-radius:calc(var(--r) + 8px);overflow:hidden;border:1px solid var(--line);box-shadow:var(--sh);background:var(--surface)}
+.mkba-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% calc(var(--p)*100%)}
+.mkba-hint{display:flex;align-items:center;gap:9px;margin-top:20px;font-size:.85rem;color:var(--mut);opacity:clamp(0,calc(1.15 - var(--p)*5),1)}
+.mkba-hint svg{width:15px;height:15px;color:var(--acc)}
+@media(max-width:820px){.mkba{height:240vh}.mkba-grid{grid-template-columns:1fr;gap:22px}.mkba-frame{max-width:300px;max-height:52vh}.mkba-hint{display:none}}
+@media(prefers-reduced-motion:reduce){.mkba{height:auto}.mkba-stage{position:static;min-height:0;padding:72px 0}.mkba-frame{aspect-ratio:auto;max-height:none}.mkba-frame img{position:static;height:auto;object-fit:contain}}
 </style>
-<section class="ba-static">
- <div class="wrap">
-  <div class="sh reveal"><span class="eyebrow"><span class="d"></span>Antes e depois</span><h2>Casos que a própria clínica mostra</h2><p>Material de antes e depois divulgado pela Clínica Odontológica MK. No site final, esta seção reúne os casos reais da clínica dentro do padrão visual da página.</p></div>
-  <figure class="ba-fig reveal">
-   <img src="antes-depois.jpg" alt="Antes e depois de reabilitação com implantes, divulgado pela Clínica Odontológica MK" loading="lazy">
-   <figcaption>Imagem divulgada pela Clínica Odontológica MK. Rascunho de demonstração, não é o site oficial.</figcaption>
-  </figure>
+<noscript><style>.mkba{height:auto}.mkba-stage{position:static;min-height:0;padding:72px 0}.mkba-frame{aspect-ratio:auto;max-height:none}.mkba-frame img{position:static;height:auto;object-fit:contain}</style></noscript>
+<section class="mkba" data-ba>
+ <div class="mkba-stage">
+  <div class="wrap">
+   <div class="mkba-grid">
+    <div class="ba-copy reveal">
+     <span class="eyebrow"><span class="d"></span>Antes e depois</span>
+     <h2>Do antes ao depois</h2>
+     <p>Um caso de reabilitação com implantes divulgado pela própria Clínica Odontológica MK. No site final, esta seção reúne os casos reais da clínica.</p>
+     <div class="ba-rail"><i></i></div>
+     <div class="ba-steps"><span class="s1">Antes</span><span class="s2">Depois</span></div>
+     <div class="mkba-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg>Role a página para ver o resultado</div>
+     <p class="ba-note">Imagem divulgada pela Clínica Odontológica MK. Rascunho de demonstração, não é o site oficial.</p>
+    </div>
+    <figure class="mkba-frame">
+     <img src="antes-depois.jpg" alt="Antes e depois de reabilitação com implantes, divulgado pela Clínica Odontológica MK">
+     <span class="ba-tag a">Antes</span><span class="ba-tag b">Depois</span>
+    </figure>
+   </div>
+  </div>
  </div>
 </section>
 
